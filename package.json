@@ -6,8 +6,8 @@
   "scripts": {
     "start": "npm run dev:11ty & dev:css",
     "build": "run-s build:11ty & build:css",
-    "build:prod_": "eleventy",
-    "build:prod": "npm run build:11ty:prod & build:css",
+    "build:prod": "eleventy",
+    "build:prod_": "npm run build:11ty:prod & build:css",
     "dev:11ty": "eleventy --serve",
     "dev:css": "tailwindcss -i src/css/tailwind.css -o public/css/tailwind.css --watch --postcss",
     "build:11ty": "eleventy",
