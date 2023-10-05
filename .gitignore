@@ -2,3 +2,5 @@
 /node_modules
 # Generated files
 public
+# Other
+.DS_Store
