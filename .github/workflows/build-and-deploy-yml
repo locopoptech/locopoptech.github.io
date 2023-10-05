@@ -1,4 +1,4 @@
-ame: Build & Deploy
+name: Build & Deploy
 
 on:
   push:
@@ -30,4 +30,4 @@ jobs:
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
