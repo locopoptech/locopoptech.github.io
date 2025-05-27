@@ -1,20 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>My Eleventy Website</title>
-    <!-- <link rel="stylesheet" href="/css/style.css" /> -->
-    <link rel="stylesheet" href="/css/tailwind.css">
-  </head>
-  <body class="p-12">
-    <h1>Hello World! v4</h1>
-<h2>Blog Posts</h2>
-<p><div></p>
-<p><a href="/my-first-post/">My First Blog Post</a></p>
-<p></div></p>
-<p><div></p>
-<p><a href="/my-second-post/">My Second Blog Post</a></p>
-<p></div></p>
 
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>locopop home</title>
+  <link rel="stylesheet" href="/css/tailwind-o.css">
+</head>
+
+<body class="scroll-smooth">
+  <nav class="
+    fixed w-full z-50 top-0 start-0 
+    bg-gray-900 text-white shadow-md">
+  <div class="max-w-screen-xl flex flex-wrap items-center mx-auto p-4">
+<p><a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+<span class="self-center text-xl font-bold whitespace-nowrap text-white">locopop</span>
+</a></p>
+<p><div class="
+        flex space-x-3
+        sm:order-2 sm:space-x-3
+        rtl:space-x-reverse"
+    ></p>
+<p><button id="menu-toggle" data-collapse-toggle="navbar-sticky" type="button" class="
+            inline-flex items-center p-2 w-10 h-10 justify-center text-sm 
+            text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 hover:bg-gray-700 focus:ring-gray-600
+            sm:hidden
+            hidden" 
+            aria-controls="navbar-sticky" aria-expanded="false">
+<span class="sr-only">Open main menu</span>
+<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+</svg>
+</button></p>
+<p></div></p>
+<p><div class="hidden w-full sm:flex sm:w-auto sm:order-1" id="navbar-sticky">
+<ul class="
+            flex flex-col p-4 mt-4
+            font-medium border border-gray-700
+            sm:p-0 sm:pl-8 sm:space-x-4 sm:flex-row sm:mt-0 sm:border-0
+            sm:bg-gray-900
+            rtl:space-x-reverse">
+<li><a href="#about" class="nav-link hover:text-blue-400 transition-colors block py-2 px-3 sm:p-0" aria-current="page">About</a></li>
+<li><a href="#contact" class="nav-link hover:text-blue-400 transition-colors block py-2 px-3 sm:p-0" aria-current="page">Contact</a></li>
+<li><a href="#appointments" class="nav-link hover:text-blue-400 transition-colors block py-2 px-3 sm:p-0" aria-current="page">Appointments</a></li>
+</ul>
+</div></p>
+  </div>
+</nav>
+<main>
+    <section id="home" class="relative w-full h-[60vh] overflow-hidden">
+        <img
+            src="/assets/images/hero-image.jpg"
+            alt="Descriptive alt text"
+            class="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="text-center">
+                <h1 class="text-white text-4xl md:text-6xl font-bold px-4">
+                    locopop
+                </h1>
+                <h2 class="text-white text-1xl md:text-2xl font-bold px-4 pt-6">
+                    Admin and IT services<br/>in Wendover, Bucks
+                </h2>
+                <a href="#about" class="mt-4 inline-block bg-white text-black px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="prose max-w-3xl mx-auto px-4 py-4 scroll-mt-8 pt-16">
+        <h2>About</h2>
+        <p>
+        James Harrington is trading as locopop in Wendover, Buckinghamshire.
+        </p>
+        <p>
+        James retired from a career in actuarial finance, pension administration and related software development in 2022 and now volunteers and freelances for local community groups.
+        </p>
+    </section>
+    <section id="contact" class="prose max-w-3xl mx-auto px-4 py-4 scroll-mt-20">
+        <h2>
+            Contact
+        </h2>
+        <p>
+            You can reach James via email at <a href="mailto:james@locopop.org">james@locopop.org</a>.
+        </p> 
+    </section>
+    <section id="appointments" class="prose max-w-3xl mx-auto px-4 py-4 pb-20 scroll-mt-20">
+        <h2>
+            Appointments
+        </h2>
+        <h3>Aylesbury Hockey Club</h3>
+        <p><b>Treasurer</b> - club accounts, budgeting, spreadsheet based book-keeping, financial reporting to committee and members, payments, subs and credit control, SumUp admin.</p>
+        <h3>Wendover Community News CIC</h3>
+        <p><b>Director, Treasurer and Secretary (interim)</b> - micro-entity company accounts, Sage book-keeping, financial reporting to board, customer invoicing and credit control, supplier payments, volunteer expenses, secretarial for the board, regulatory filings for Companies House, HMRC and the CIC regulator, and bulk mailings to volunteers.</p>
+        <p><b>Distribution Co-ordinator</b> - spreadsheet based distribution logistics and co-ordinating 7 drivers and 70 deliverers once a month.
+        <h3>Wendover Cricket Club</h3>
+        <p><b>Trustee and Treasurer</b> - club accounts, budgeting, spreadsheet based book-booking, financial reporting to committee and members, payments, subs and credit control, gift aid on donations, SumUp admin.</p>
+        <h3>Wendover HS2 Action Mitigation Group</h3>
+        <p><b>Web master</b> - occasional updates to an inherited, legacy website and bulk mailings to supporters.<p>
+    </section>
+</main>
+
+  <script src="/js/flowbite.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("nav-menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll("nav a.nav-link");
+
+      function activateMenu() {
+        let scrollPos = window.scrollY + 100; // Offset for early activation
+
+        sections.forEach((section) => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          const id = section.getAttribute("id");
+
+          if (scrollPos >= top && scrollPos < top + height) {
+            navLinks.forEach((link) => {
+              link.classList.remove("text-blue-400");
+              if (link.getAttribute("href") === `#${id}`) {
+                link.classList.add("text-blue-400");
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener("scroll", activateMenu);
+      activateMenu(); // Run once on load
+    });
+  </script>
+</body>
+
 </html>
