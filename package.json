@@ -6,7 +6,7 @@
   "scripts": {
     "start": "eleventy --serve & tailwindcss -i src/css/tailwind-i.css -o public/css/tailwind-o.css --watch --postcss",
     "build": "eleventy & tailwindcss -i src/css/tailwind-i.css -o public/css/tailwind-o.css --postcss",
-    "build:prod": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwindcss -i src/css/tailwindcss-i -c tailwind.config.js -o public/css/tailwind-o.css --minify --postcss"
+    "build:prod": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production tailwindcss -i src/css/tailwind-i.css -c tailwind.config.js -o public/css/tailwind-o.css --minify --postcss"
   },
   "keywords": [],
   "author": "",
