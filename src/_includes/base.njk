@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>{{ title }}</title>
-    <!-- <link rel="stylesheet" href="/css/style.css" /> -->
-    <link rel="stylesheet" href="{{ '/css/tailwind.css' | url }}">
-  </head>
-  <body class="p-12">
-    {{ content | safe }}
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{{ '/css/tailwind-o.css' | url }}">
+</head>
+
+<body class="scroll-smooth">
+  {{ content | safe }}
+  <script src="/js/flowbite.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("nav-menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll("nav a.nav-link");
+
+      function activateMenu() {
+        let scrollPos = window.scrollY + 100; // Offset for early activation
+
+        sections.forEach((section) => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          const id = section.getAttribute("id");
+
+          if (scrollPos >= top && scrollPos < top + height) {
+            navLinks.forEach((link) => {
+              link.classList.remove("text-blue-400");
+              if (link.getAttribute("href") === `#${id}`) {
+                link.classList.add("text-blue-400");
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener("scroll", activateMenu);
+      activateMenu(); // Run once on load
+    });
+  </script>
+</body>
+
 </html>

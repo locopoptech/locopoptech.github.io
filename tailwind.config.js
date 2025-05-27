@@ -1,9 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{njk,md}", "./src/**/*.svg",],
+  darkMode: 'class',
+  content: [
+    "./node_modules/flowbite/**/*.js",
+    "./src/**/*.{njk,md}",
+    "./src/**/*.svg",
+    "./src/**/*.js",
+  ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin'),
+    require('@tailwindcss/typography'),
+  ],
 }
 

@@ -1,12 +1,8 @@
 ---
 layout: base.njk
 permalink: /
-title: My Eleventy Website
+title: locopop home
 templateEngineOverride: njk,md
 ---
 
-# Hello World! v4
-
-## Blog Posts
-
-{% include "postlist.njk" %}
+{% include "home.njk" %}

@@ -4,26 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dev:11ty & dev:css",
-    "build": "run-s build:11ty & build:css",
-    "build:prod": "eleventy",
-    "build:prod_": "npm run build:11ty:prod & build:css",
-    "dev:11ty": "eleventy --serve",
-    "dev:css": "tailwindcss -i src/css/tailwind.css -o public/css/tailwind.css --watch --postcss",
-    "build:11ty": "eleventy",
-    "build:11ty:prod": "ELEVENTY_ENV=production eleventy",
-    "build:css": "tailwindcss -i src/css/tailwind.css -o public/css/tailwind.css --postcss"
+    "start": "eleventy --serve & tailwindcss -i src/css/tailwind-i.css -o public/css/tailwind-o.css --watch --postcss",
+    "build": "eleventy & tailwindcss -i src/css/tailwind-i.css -o public/css/tailwind-o.css --postcss",
+    "build:prod": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwindcss -i src/css/tailwindcss-i -c tailwind.config.js -o public/css/tailwind-o.css --minify --postcss"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "2.0.1",
-    "sass": "1.68.0"
+    "@themesberg/flowbite": "^1.3.0",
+    "flowbite": "^1.8.1"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.16",
-    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3"
   }
